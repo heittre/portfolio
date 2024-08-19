@@ -1,0 +1,38 @@
+/* ./your-css-folder/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+
+
+h2{
+    @apply text-xl md:text-4xl
+}
+
+
+p{
+    @apply text-xl tracking-tight leading-relaxed
+}
+
+span {
+    @apply text-purple-600
+}
+
+
+.shiny-effect {
+    position:absolute;
+    border-radius: 50%;
+    pointer-events : none;
+    z-index:1;
+    background-color: purple;
+}
+
+.bg-primary-color{
+    @apply bg-purple-600
+}
