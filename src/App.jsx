@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Home from "./Pages/Home";
 import FullStack from "./Pages/FullStack";
 import TestAutomation from "./Pages/TestAutomation"
