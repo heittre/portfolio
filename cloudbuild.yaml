@@ -1,0 +1,17 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/portfoliochamu/portfolio', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/portfoliochamu/portfolio']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - portfolio
+      - --image=gcr.io/portfoliochamu/portfolio
+      - --region=us-east1
+      - --platform=managed
+      - --allow-unauthenticated

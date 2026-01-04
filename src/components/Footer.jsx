@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaGithubSquare, FaInstagram } from 'react-icons/fa'
+import { FaGithubSquare } from 'react-icons/fa'
+import { CiLinkedin } from "react-icons/ci";
 
 function Footer() {
   return (
@@ -7,12 +8,18 @@ function Footer() {
         <div className='space-y-4'>
                 <h3 className='text-2xl text-gray-200 font-semibold'>C.S Siriwardhane</h3>
                 <div className='flex flex-row gap-6 text-gray-400 text-4xl'>
-                        <a href="#"> <FaGithubSquare/></a>
-                        <a href="#"> <FaInstagram/></a>
+                        <a href="https://github.com/heittre"> <FaGithubSquare/></a>
+                        <a href="https://linkedin.com/in/https://www.linkedin.com/in/chamudi-siriwardhane/"> <CiLinkedin /></a>
+                       
                 </div>
         </div>
 
-       <p className='text-gray-400'> @2024 C.S Siriwardhane</p>
+       
+      <div className='flex flex-col text-gray-400'>
+        <div>Email : chamudisiriwardena@gmail.com</div>
+        <div>Mobile :+94 70 2191756</div>
+        <p className='text-gray-400'> @2026 C.S Siriwardhane  </p>
+      </div>
     </div>
   )
 }

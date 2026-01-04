@@ -25,5 +25,5 @@ export default defineConfig({
       ],
     },
   },
-  base: '/portfolio/', // Add this line
+  base: '/', // Add this line
 })

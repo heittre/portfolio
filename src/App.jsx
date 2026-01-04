@@ -1,23 +1,21 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import '../src/index.css'
-import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Portofolio from './components/Portofolio'
-import Experience from './components/Experience'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import FullStack from "./Pages/FullStack";
+import TestAutomation from "./Pages/TestAutomation"
+import MachineLearning from "./Pages/MachineLearning"
+import OtherInterests from "./Pages/OtherInterests";
 
-export default function App() {
+function App() {
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Skills/>
-      <Portofolio/>
-      <Experience/>
-      <Contact/>
-      <Footer/>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/full-stack" element={<FullStack />} />
+      <Route path="/testing" element={<TestAutomation />} />
+      <Route path="/ml" element={<MachineLearning />} />
+      <Route path="/miscellaneous" element={<OtherInterests />} />
+    </Routes>
+  );
 }
+
+export default App;
