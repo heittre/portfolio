@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -16,81 +17,83 @@ function Navbar() {
       <nav className="max-w-[1300px] mx-auto flex justify-between items-center px-8 md:px-12 h-20 text-gray-300">
 
         {/* Logo */}
-        <a
-          href="/home"
+        <RouterLink
+          to="/home"
           className="text-lg font-semibold tracking-wide hover:text-purple-400 transition-colors"
         >
           Chamudi Siriwardhane
-        </a>
+        </RouterLink>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 items-center text-sm font-medium">
 
           {/* About */}
           <li className="relative group">
-            <Link to="about" smooth offset={50} duration={500}>
+            <ScrollLink to="about" smooth offset={50} duration={500}>
               <span className="hover:text-purple-400 transition-colors">
                 About
               </span>
-            </Link>
+            </ScrollLink>
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-purple-400 transition-all group-hover:w-full" />
           </li>
           <li className="relative group">
-            <Link to="techstack" smooth offset={50} duration={500}>
+            <ScrollLink to="techstack" smooth offset={50} duration={500}>
               <span className="hover:text-purple-400 transition-colors">
                 Tech Stack
               </span>
-            </Link>
+            </ScrollLink>
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-purple-400 transition-all group-hover:w-full" />
           </li>
 
           {/* Projects Dropdown */}
-          <li
-            className="relative group"
-            onMouseEnter={() => setProjectsOpen(true)}
-            onMouseLeave={() => setProjectsOpen(false)}
-          >
-            <span className="cursor-pointer flex items-center gap-1 hover:text-purple-400 transition-colors">
-              Projects
-              <span className="text-xs">▾</span>
-            </span>
+        <li
+  className="relative group"
+  onMouseEnter={() => setProjectsOpen(true)}
+  onMouseLeave={() => setProjectsOpen(false)}
+>
+  <span className="cursor-pointer flex items-center gap-1 hover:text-purple-400 transition-colors">
+    Projects
+    <span className="text-xs">▾</span>
+  </span>
 
-            <AnimatePresence>
-              {projectsOpen && (
-                <motion.ul
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute left-0 mt-3 w-52 rounded-xl bg-black/90 backdrop-blur-xl shadow-xl border border-white/10 overflow-hidden"
-                >
-                  {[
-                    { label: "Full Stack", href: "/full-stack" },
-                    { label: "Testing", href: "/testing" },
-                    { label: "Data Science", href: "/data-science" },
-                    { label: "Other", href: "/miscellaneous" },
-                  ].map((item) => (
-                    <li key={item.href}>
-                      <a
-                        href={item.href}
-                        className="block px-5 py-3 text-sm hover:bg-purple-500 hover:text-black transition-colors"
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </motion.ul>
-              )}
-            </AnimatePresence>
+  <AnimatePresence>
+    {projectsOpen && (
+      <motion.ul
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 8 }}
+        transition={{ duration: 0.15 }}
+        className="absolute left-0 mt-3 w-52 rounded-xl bg-black/90 backdrop-blur-xl shadow-xl border border-white/10 overflow-hidden"
+      >
+        {[
+          { label: "Full Stack", to: "/full-stack" },
+          { label: "Testing", to: "/testing" },
+          { label: "Data Science", to: "/ml" },
+          { label: "Other", to: "/miscellaneous" },
+        ].map((item) => (
+          <li key={item.to}>
+            <RouterLink
+              to={item.to}
+              className="block px-5 py-3 text-sm hover:bg-purple-500 hover:text-black transition-colors"
+              onClick={() => setProjectsOpen(false)}
+            >
+              {item.label}
+            </RouterLink>
           </li>
+        ))}
+      </motion.ul>
+    )}
+  </AnimatePresence>
+</li>
+
 
           {/* Contact */}
           <li className="relative group">
-            <Link to="contact" smooth offset={50} duration={500}>
+            <ScrollLink to="contact" smooth offset={50} duration={500}>
               <span className="hover:text-purple-400 transition-colors">
                 Contact
               </span>
-            </Link>
+            </ScrollLink>
             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-purple-400 transition-all group-hover:w-full" />
           </li>
         </ul>
@@ -113,14 +116,14 @@ function Navbar() {
               <ul className="flex flex-col items-center gap-10 mt-32 text-3xl font-semibold">
 
                 <li>
-                  <Link to="about" smooth offset={50} duration={500} onClick={toggleNav}>
+                  <ScrollLink to="about" smooth offset={50} duration={500} onClick={toggleNav}>
                     About
-                  </Link>
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link to="techstack" smooth offset={50} duration={500} onClick={toggleNav}>
+                  <ScrollLink to="techstack" smooth offset={50} duration={500} onClick={toggleNav}>
                     Tech Stack
-                  </Link>
+                  </ScrollLink>
                 </li>
 
                 {/* Mobile Projects */}
@@ -135,33 +138,33 @@ function Navbar() {
                   {mobileProjectsOpen && (
                     <ul className="mt-6 space-y-4 text-xl text-gray-400">
                       <li>
-                        <a href="/full-stack" onClick={toggleNav} className="hover:text-purple-400">
+                        <RouterLink to="/full-stack" onClick={toggleNav} className="hover:text-purple-400">
                           Full Stack
-                        </a>
+                        </RouterLink>
                       </li>
                       <li>
-                        <a href="/testing" onClick={toggleNav} className="hover:text-purple-400">
+                        <RouterLink to="/testing" onClick={toggleNav} className="hover:text-purple-400">
                           Testing
-                        </a>
+                        </RouterLink>
                       </li>
                       <li>
-                        <a href="/ml" onClick={toggleNav} className="hover:text-purple-400">
+                        <RouterLink to="/ml" onClick={toggleNav} className="hover:text-purple-400">
                           Data Science
-                        </a>
+                        </RouterLink>
                       </li>
                       <li>
-                        <a href="/miscellaneous" onClick={toggleNav} className="hover:text-purple-400">
+                        <RouterLink to="/miscellaneous" onClick={toggleNav} className="hover:text-purple-400">
                         Other
-                        </a>
+                        </RouterLink>
                       </li>
                     </ul>
                   )}
                 </li>
 
                 <li>
-                  <Link to="contact" smooth offset={50} duration={500} onClick={toggleNav}>
+                  <ScrollLink to="contact" smooth offset={50} duration={500} onClick={toggleNav}>
                     Contact
-                  </Link>
+                  </ScrollLink>
                 </li>
               </ul>
             </motion.div>

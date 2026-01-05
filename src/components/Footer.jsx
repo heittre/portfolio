@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithubSquare } from 'react-icons/fa'
 import { CiLinkedin } from "react-icons/ci";
+import {Link as RouterLink} from "react-router-dom"
 
 function Footer() {
   return (
@@ -19,6 +20,7 @@ function Footer() {
         <div>Email : chamudisiriwardena@gmail.com</div>
         <div>Mobile :+94 70 2191756</div>
         <p className='text-gray-400'> @2026 C.S Siriwardhane  </p>
+       
       </div>
     </div>
   )
