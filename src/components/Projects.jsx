@@ -41,6 +41,26 @@ const projects = [
       github: "https://github.com/heittre/Library-Management-System",
     },
   },
+  {
+    interest: "testing",
+    img: project3,
+    title: "Saucedemo Cypress automation framework",
+    description: "This is an automation framework to automate Saucedemo.com",
+    technologies: ["Cypress"],
+    links: {
+      github: "https://github.com/heittre/saucedemo_cypress_framework",
+    },
+  },
+  {
+    interest: "testing",
+    img: project3,
+    title: "Selenium automation framework",
+    description: "This is an automation framework to automate tutorialsninja.com",
+    technologies: ["Cypress"],
+    links: {
+      github: "https://github.com/heittre/tutorialsninja_selenium_automation_framework",
+    },
+  }
 ];
 
 

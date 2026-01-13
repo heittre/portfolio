@@ -17,7 +17,7 @@ const TestAutomation = () => {
       />
       <DownloadCVButton cv={cv} />
       {/* <Projects interest="testing" /> */}
-    <Projects interest="full-stack" />
+    <Projects interest="testing" />
 
       </section>
     </MainLayout>
