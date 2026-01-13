@@ -68,7 +68,7 @@ const Home = () => {
     />
 
     <Interests
-      path="/data-science"
+      path="/ml"
       titleSequence={["Data Science & Machine Learning", 2000]}
       description="ML models, data analysis and intelligent systems."
     />

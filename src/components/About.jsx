@@ -36,16 +36,15 @@ const About = () => {
                 transition={{ duration: 0.8 }}
                 className="text-center md:text-left"
             >
-                <TypeAnimation
-                sequence={[
-                    "Full Stack Developer", 1200,
-                    "Front-End Developer", 1200,
-                    "Back-End Developer", 1200,
-                ]}
-                speed={50}
-                repeat={Infinity}
-                className="font-bold text-gray-400 text-lg md:text-4xl italic mb-4"
-                />
+               <div className="border-l-2 border-gray-600 pl-4 mb-4">
+  <p className="text-gray-500 italic text-base md:text-xl mb-4 max-w-xl">
+  “Quality is not an act, it is a habit.”
+  <span className="block mt-1 text-sm text-gray-600 not-italic">
+    — Aristotle
+  </span>
+</p>
+</div>
+
 
                 <motion.h1
                 initial={{ opacity: 0 }}

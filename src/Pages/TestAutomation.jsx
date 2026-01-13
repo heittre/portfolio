@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Portofolio from "../components/Portofolio";
 import Projects from "../components/Projects";
 import DownloadCVButton from "../components/DownloadCVButton";
-import cv from "../assets/QE_CV.pdf"
+import cv from "../assets/qe_cv_13.pdf"
 import MainLayout from "../components/MainLayout";
 
 const TestAutomation = () => {

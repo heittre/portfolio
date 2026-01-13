@@ -14,8 +14,11 @@ const OtherInterests = () => {
         description="This Section features miscellaneous projects"
       />
       {/* <Projects interest="testing" /> */}
-    <Projects interest="other" />
-
+    {/* <Projects interest="other" /> */}
+<p className="mt-8 text-gray-500 italic flex items-center justify-center gap-2">
+  <span className="text-lg">🚧</span>
+  Projects coming soon — this section is under construction.
+</p>
       </section>
     </MainLayout>
   );

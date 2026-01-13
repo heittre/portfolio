@@ -46,7 +46,7 @@ const projects = [
     img: project3,
     title: "Saucedemo Cypress automation framework",
     description: "This is an automation framework to automate Saucedemo.com",
-    technologies: ["Cypress"],
+    technologies: ["Selenium","TestNG"],
     links: {
       github: "https://github.com/heittre/saucedemo_cypress_framework",
     },
@@ -56,10 +56,50 @@ const projects = [
     img: project3,
     title: "Selenium automation framework",
     description: "This is an automation framework to automate tutorialsninja.com",
-    technologies: ["Cypress"],
+    technologies: ["Cypress", "Javascript"],
     links: {
       github: "https://github.com/heittre/tutorialsninja_selenium_automation_framework",
     },
+  },
+  {
+    interest: "ml",
+    img: project3,
+    title: "Cognitive Distortion Classification for CBT Delivery with XAI Integration (Final Year Research)",
+    description: "This is a Python-based model for classifying cognitive distortions into five categories using XAI techniques (SHAP and LIME) to provide interpretable explanations for clinicians as a CBT delivery aid",
+    technologies: ["Python", "scikit-learn", "SHAP", "LIME", "pandas", "NumPy", "Jupyter Notebook", "Google Collab"],
+    // links: {
+    //   github: "https://github.com/heittre/tutorialsninja_selenium_automation_framework",
+    // },
+  },
+  {
+    interest: "ml",
+    img: project3,
+    title: "Wine Dataset Clustering Using K-Means and Hierarchical Methods",
+    description: "Conducted unsupervised clustering on wine datasets using K-Means (with Elbow method for optimal cluster selection) and Hierarchical Clustering (agglomerative approach) to identify natural groupings.",
+    technologies: ["R programming", "RStudio"],
+    // links: {
+    //   github: "https://github.com/heittre/tutorialsninja_selenium_automation_framework",
+    // },
+  },
+  {
+    interest: "ml",
+    img: project3,
+    title: "Appliance Energy Consumption Prediction Using Multivariate Time-Series Data",
+    description: "In this project I engineered meaningful features and applied deep learning techniques to predict future energy consumption accurately.",
+    technologies: ["Python", "Pandas", "NumPy", "TensorFlow", "Keras", "Jupyter Notebook"],
+    // links: {
+    //   github: "https://github.com/heittre/tutorialsninja_selenium_automation_framework",
+    // },
+  },
+  {
+    interest: "ml",
+    img: project3,
+    title: "Market Basket Analysis Using Association Rule Mining",
+    description: "This is a Market Basket Analysis on retail transaction data to uncover customer spending patterns using association rule mining techniques.",
+    technologies: [ "Weka", "Microsoft Excel", "Data Visualization"],
+    // links: {
+    //   github: "https://github.com/heittre/tutorialsninja_selenium_automation_framework",
+    // },
   }
 ];
 
@@ -97,16 +137,16 @@ const Projects = ({ interest }) => {
               <p className="text-gray-300 mb-4">{project.description}</p>
 
               <div className="flex space-x-4 mb-4">
-                {project.links.site && (
+                {project.links?.site && (
                   <a
-                    href={project.links.site}
+                    href={project.links?.site}
                     className="px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300 text-center"
                     target="_blank"
                   >
                     View Site
                   </a>
                 )}
-                {project.links.youtubelink && (
+                {project.links?.youtubelink && (
                   <a
                     href={project.links.youtubelink}
                     className="flex items-center gap-1 text-white hover:underline"
@@ -115,7 +155,7 @@ const Projects = ({ interest }) => {
                     Youtube Video <MdOutlineArrowOutward />
                   </a>
                 )}
-                {project.links.github && (
+                {project.links?.github && (
                   <a
                     href={project.links.github}
                     className="flex items-center gap-1 text-white"

@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Portofolio from "../components/Portofolio";
 import Projects from "../components/Projects";
 import DownloadCVButton from "../components/DownloadCVButton";
-import cv from "../assets/chamudi_siriwardhane_resume 8.pdf"
+import cv from "../assets/Chamudi_ML_CV.pdf"
 import MainLayout from "../components/MainLayout";
 
 const MachineLearning = () => {
@@ -12,13 +12,13 @@ const MachineLearning = () => {
         <section id="about">
       <Hero
         title="Data Science and Machine Learning Projects"
-        subtitle="Machine Learning projects covering basic and advanced concepts"
-        description=" Exploring and building scalable, real-world applications with modern
-          frontend frameworks, backend systems, and clean architectural
-          principles."
+        subtitle="Applied machine learning projects focused on data-driven problem solving"
+        description="This section showcases hands-on projects involving data preprocessing, feature engineering,
+model training, evaluation, and interpretation, with an emphasis on practical use cases and
+well-structured workflows."
       />
       <DownloadCVButton cv={cv} />
-      <Projects interest="full-stack" />
+      <Projects interest="ml" />
       </section>
     </MainLayout>
   );
