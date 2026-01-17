@@ -13,7 +13,7 @@ function Navbar() {
   const toggleMobileProjects = () => setMobileProjectsOpen(!mobileProjectsOpen);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-xl z-50 border-b border-white/5">
+    <header className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-xl z-[100] border-b border-white/5">
       <nav className="max-w-[1300px] mx-auto flex justify-between items-center px-8 md:px-12 h-20 text-gray-300">
 
         {/* Logo */}
@@ -99,21 +99,21 @@ function Navbar() {
         </ul>
 
         {/* Mobile Hamburger */}
-        <div onClick={toggleNav} className="md:hidden z-50 cursor-pointer">
+        <div onClick={toggleNav} className="md:hidden z-[60] relative cursor-pointer">
           {nav ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
         </div>
 
         {/* Mobile Menu */}
         <AnimatePresence>
           {nav && (
-            <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ duration: 0.25 }}
-              className="fixed inset-0 bg-black z-40 md:hidden"
-            >
-              <ul className="flex flex-col items-center gap-10 mt-32 text-3xl font-semibold">
+           <motion.div
+  initial={{ x: "-100%" }}
+  animate={{ x: 0 }}
+  exit={{ x: "-100%" }}
+  transition={{ duration: 0.25 }}
+  className="fixed inset-0 bg-black-500 z-[55] md:hidden"
+>
+  <ul className="flex flex-col items-center gap-10 mt-32 text-3xl font-semibold h-full">
 
                 <li>
                   <ScrollLink to="about" smooth offset={50} duration={500} onClick={toggleNav}>

@@ -10,7 +10,7 @@ function Footer() {
                 <h3 className='text-2xl text-gray-200 font-semibold'>C.S Siriwardhane</h3>
                 <div className='flex flex-row gap-6 text-gray-400 text-4xl'>
                         <a href="https://github.com/heittre"> <FaGithubSquare/></a>
-                        <a href="https://linkedin.com/in/https://www.linkedin.com/in/chamudi-siriwardhane/"> <CiLinkedin /></a>
+                        <a href="https://www.linkedin.com/in/chamudi-siriwardhane/"> <CiLinkedin /></a>
                        
                 </div>
         </div>

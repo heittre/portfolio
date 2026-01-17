@@ -19,12 +19,13 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MainLayout from "../components/MainLayout";
 import DownloadCVButton from "./DownloadCVButton";
+import cv from '../assets/qe_cv_13.pdf'
 import Socials from "./Socials";
 
 const About = () => {
     return (
         <div>
-        <section id="about" className="mb-16 md:mb-20">
+        <section id="about" className="mb-16 md:mb-20 scroll-mt-20">
         <div className="max-w-[1200px] mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
@@ -36,13 +37,13 @@ const About = () => {
                 transition={{ duration: 0.8 }}
                 className="text-center md:text-left"
             >
-               <div className="border-l-2 border-gray-600 pl-4 mb-4">
-  <p className="text-gray-500 italic text-base md:text-xl mb-4 max-w-xl">
-  “Quality is not an act, it is a habit.”
-  <span className="block mt-1 text-sm text-gray-600 not-italic">
-    — Aristotle
-  </span>
-</p>
+               <div className="border-l-2 border-purple-500 pl-3 md:pl-4 mb-4 w-full">
+  <p className="text-white italic text-base sm:text-lg md:text-xl leading-relaxed break-words">
+    "Quality is not an act, it is a habit."
+    <span className="block mt-2 text-sm sm:text-base text-gray-300 not-italic">
+      — Aristotle
+    </span>
+  </p>
 </div>
 
 
@@ -75,7 +76,7 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.9 }}
                 className="flex flex-wrap justify-center md:justify-start items-center gap-6"
                 >
-                <DownloadCVButton />
+                <DownloadCVButton cv={cv}/>
                 <Socials />
                 </motion.div>
             </motion.div>

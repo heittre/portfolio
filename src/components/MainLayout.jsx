@@ -8,13 +8,16 @@ const MainLayout = ({ children }) => {
     <div className="relative">
       {/* Common navbar */}
       <Navbar />
-        
-      {/* The page-specific content */}
-      {children}
+      
+      {/* Content padded to clear fixed navbar (h-20 = 80px) */}
+      <main className="pt-20">
+        {/* The page-specific content */}
+        {children}
 
-      {/* Common footer / contact */}
-      <Contact />
-      <Footer/>
+        {/* Common footer / contact */}
+        <Contact />
+        <Footer/>
+      </main>
     </div>
   );
 };
